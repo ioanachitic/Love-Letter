@@ -1,0 +1,449 @@
+body{
+    background-color: #ffccb3;
+}
+
+@font-face {
+    font-family: font_titlu;
+    src: url(PinyonScript-Regular.ttf);
+}
+
+#antet{
+    height: 160px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#ff9f80, #330d00, #ff9f80);
+    z-index: 1;
+}
+
+#titlu{
+    font-family: font_titlu;
+    letter-spacing: 3px;
+    position: fixed;
+    text-indent: 10%;
+    left: 0;
+    top: 30px;
+    padding: 10px;
+    background: linear-gradient(#661a00, #ffccb3, #661a00);
+    width: 100%;
+    z-index: 2;
+}
+
+@keyframes rotatie{
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+}
+
+#logo{
+    position: fixed;
+    right: 5%;
+    top: 15px;
+    height: 130px;
+    width: auto;
+    animation-name: rotatie;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    z-index: 3;
+}
+
+#poveste{
+    position: relative;
+    top: 160px;
+    text-indent: 5%;
+    margin: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#galerie img{
+    width: 90%;
+    height: auto;
+    display: block;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    border-radius: 20px;
+    box-shadow: 3px 3px #ff9f80;
+}
+
+#galerie{
+    float: right;
+    width: 50%;
+    height: auto;
+    display: block;
+}
+
+@media screen and (min-width: 700px) and (max-width: 950px){
+    #galerie img{
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+
+@media screen and (min-width: 950px){
+    #galerie img{
+        width: 50%;
+        margin-left: 25%;
+        margin-bottom: 2%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    #logo{
+        display: none;
+    }
+}
+
+div > a{
+    position: relative;
+    top: 20px;
+    border-radius: 20px;
+    background: radial-gradient(#ff9f80, #661a00);
+    font-size: 15px;
+    padding: 20px 40px 20px;
+    text-indent: 0;
+}
+
+div > a:link{
+    color: brown;
+}
+
+div > a:hover{
+    color: black;
+    font-size: 30px;
+    padding: 30px 50px 30px;
+}
+
+div > a:active{
+    color: brown;
+}
+
+div > a:visited{
+    color: brown;
+}
+
+footer{
+    position: fixed;
+    width: 100%;
+    height: 0px;
+    margin-top: 50px;
+    bottom: 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#antet_joc{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background: linear-gradient(#661a00, #ffccb3, #661a00);
+    line-height: 0px;
+}
+
+h3{
+    text-indent: 5%;
+    font-family: font_titlu;
+    font-size: 200%;
+}
+
+div > p{
+    text-indent: 2%;
+    font-size: 90%;
+}
+
+#logo_joc{
+    position: fixed;
+    right: 5%;
+    top: 3px;
+    height: 75px;
+    width: auto;
+    animation-name: rotatie;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    z-index: 3;
+}
+
+@media screen and (max-width: 365px){
+    #logo_joc{
+        display: none;
+    }
+}
+
+#reguli{
+    width: 25%;
+    position: fixed;
+    margin: auto;
+    top: 110px;
+    right: 1%;
+    background-color: #ffbb99;
+    border: 4px inset #ffccb3;
+    outline: 2px inset #802b00; 
+}
+
+#buton_reguli{
+    display: none;
+    position: fixed;
+    top: 90px;
+    right: 10%;
+    background: radial-gradient(#ff9f80, #661a00);
+    height: 3%;
+    width: auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#carti{
+    width: 70%;
+    height: 75%;
+    position: fixed;
+    top: 110px;
+    left: 1%;
+    background: linear-gradient(#661a00, #ffccb3, #661a00);
+    border-bottom: 3px solid #331100;
+    border-top: 3px solid #331100;
+}
+
+@media screen and (max-width: 650px){
+    #reguli{
+        display: none;
+    }
+    
+    #carti{
+        width: 96%;
+        left: 2%;
+        top: 140px;
+    }
+    
+    #buton_reguli{
+        display: block;
+    }
+}
+
+div div{
+    height: 150px;
+    width: 100px;
+    border-radius: 20px;
+    border: 2px solid #661a00;
+    overflow: hidden;
+}
+
+div img{
+    height: 150px;
+    width: 100px;
+}
+
+#a_m{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 3;
+}
+
+#a_t{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    z-index: 2;
+}
+
+#a_j{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    z-index: 1;
+}
+
+#pachet{
+    position: absolute;
+    top: 30%;
+    left: 76%;
+}
+
+#j_m{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    z-index: 3;
+}
+
+#j_t{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    z-index: 2;
+}
+
+#j_j{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+}
+
+@media screen and (max-width: 450px){
+    #a_m{
+        position: absolute;
+        top: 10%;
+        left: 3%;
+    }
+
+    #a_t{
+        position: absolute;
+        top: 10%;
+        left: 14%;
+    }
+
+    #a_j{
+        position: absolute;
+        top: 10%;
+        left: 29%;
+    }
+
+    #pachet{
+        position: absolute;
+        top: 30%;
+        left: 65%;
+    }
+
+    #j_m{
+        position: absolute;
+        top: 50%;
+        left: 3%;
+    }
+    
+    #j_t{
+        position: absolute;
+        top: 50%;
+        left: 14%;
+    }
+
+    #j_j{
+        position: absolute;
+        top: 50%;
+        left: 29%;
+    }
+}
+
+
+#start{
+    position: fixed;
+    width: 25%;
+    height: 10%;
+    bottom: 5%;
+    right: 1%;
+    background-color: #661a00;
+    color: #ffccb3;
+    font-size: 120%;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:650px){
+    #start{
+        right: 10%;
+    }
+}
+
+#reguli_buton{
+    height: 70%;
+    width: 70%;
+    position: fixed;
+    top: 25%;
+    left:15%;
+    background-color: #331100;
+    color: #ffddcc;
+    text-align: center;
+    display: none;
+    border-radius: 30px;
+}
+
+#inchide{
+    background: radial-gradient(#ff9f80, #661a00);
+    height: 7%;
+    width: 25%;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 3%;
+    left: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#mesaj{
+    position: relative;
+    top: 160px;
+    text-align: center;
+}
+
+a:link{
+    color: #4d1a00;
+}
+
+a:visited{
+    color: #4d1a00;
+}
+
+a:active{
+    color: #4d1a00;
+}
+
+#castigat{
+    display: none;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+#play_again{
+    height: 30px;
+    width: 200px;
+}
+
+#pierdut{
+    display: none;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+button:hover{
+    box-shadow: 5px 5px 5px #4d1a00;
+}
+
+
+
+
+
+
+
+
