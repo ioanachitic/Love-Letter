@@ -111,8 +111,8 @@ div > a:link{
 
 div > a:hover{
     color: black;
-    font-size: 30px;
-    padding: 30px 50px 30px;
+    font-size: 20px;
+    padding: 25px 45px 25px;
 }
 
 div > a:active{
@@ -239,11 +239,10 @@ div > p{
     }
 }
 
-div div{
+#carti div{
     height: 150px;
     width: 100px;
     border-radius: 20px;
-    border: 2px solid #661a00;
     overflow: hidden;
 }
 
@@ -337,6 +336,10 @@ div img{
         left: 14%;
     }
 
+    #j_t:hover{
+        z-index: 4;
+    }
+
     #j_j{
         position: absolute;
         top: 50%;
@@ -347,7 +350,7 @@ div img{
 
 #start{
     position: fixed;
-    width: 25%;
+    width: 20%;
     height: 10%;
     bottom: 5%;
     right: 1%;
@@ -360,7 +363,7 @@ div img{
 
 @media screen and (max-width:650px){
     #start{
-        right: 10%;
+        right: 7%;
     }
 }
 

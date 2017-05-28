@@ -1,3 +1,5 @@
+var ok=0;
+
 function initializare(){
     var j=document.getElementById("j_m");
     var a=document.getElementById("a_m");
@@ -55,20 +57,24 @@ function joaca_carte_t(){
 }
 
 function ia_carte(){
-    var p, t;
-    t=document.getElementById("j_t");
-    p=document.getElementById("pachet");
-    
-    var i=document.createElement("img");
-    t.appendChild(i);
-    i.setAttribute("id", "j_t_img");
-    
-    i.src=p.firstElementChild.src;
+
+    if(ok!=0){
+        var p, t;
+        t=document.getElementById("j_t");
+        p=document.getElementById("pachet");
+
+        var i=document.createElement("img");
+        t.appendChild(i);
+        i.setAttribute("id", "j_t_img");
+
+        i.src=p.firstElementChild.src;
+    }
 }
     
 function start_joc(){
     var b=document.getElementById("start");
     b.style.display="none";
+    ok=1;
     initializare();
 }
 
@@ -80,7 +86,7 @@ function ascunde_reguli(){
     document.getElementById("reguli_buton").style.display="none";
 }
 
-var rezultat="pierdut";
+var rezultat="castigat";
 
 function rez(){
     if(rezultat=="castigat"){
@@ -92,3 +98,5 @@ function rez(){
         c.style.display="block";
     }
 }
+
+

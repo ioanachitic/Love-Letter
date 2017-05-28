@@ -466,8 +466,11 @@ function alege(){
 
 	if(sem == 1)
 	{
-		if(CarteManaC== i/3+1)
-		   alert("CASTIGAT")
+		if(CarteManaC== i/3+1){
+			rezultat="castigat";
+            window.open("./sfarsit.html", "_self");
+		}
+
 	   else astepareTragereCarteCalculator();
         g.style.display="none";
 		return copii[i].id;
@@ -517,9 +520,15 @@ function BaronJ(){
 							
 						},800);
 	if(CarteManaC < CarteManaJ)
-		setTimeout(function(){alert("CASTIGAT");},1000);
+		setTimeout(function(){
+            rezultat="castigat";
+            window.open("./sfarsit.html", "_self");
+        },1000);
 	if(CarteManaC > CarteManaJ)
-		setTimeout(function(){alert("PIERDUT");},1000);
+		setTimeout(function(){
+            rezultat="pierdut";
+            window.open("./sfarsit.html", "_self");
+        },1000);
 	if(CarteManaC == CarteManaJ){
 		CarteAflata=CarteManaC;
 		astepareTragereCarteCalculator();
@@ -533,8 +542,10 @@ function CameristaJ(){
 }
 
 function PrintJ(){
-	if(CarteManaC==8)
-		alert("CASTIGAT");
+	if(CarteManaC==8){
+        rezultat="castigat";
+        window.open("./sfarsit.html", "_self");
+    }
 	else{
 		var t=document.getElementById("a_j");
 		if(a2aRunda==1){
@@ -583,7 +594,8 @@ function ContesaJ(){
 }
 
 function PrintesaJ(){
-	alert("PIERDUT");
+    rezultat="pierdut";
+    window.open("./sfarsit.html", "_self");
 }
 
 function actiuneJ(CarteJucata){
@@ -634,7 +646,10 @@ function GardianaC(){// de facut mai frumusel
 	
 	
 	if(a==CarteManaJ)
-		setTimeout(function(){alert("PIERDUT");},1000);
+		setTimeout(function(){
+            rezultat="castigat";
+            window.open("./sfarsit.html", "_self");
+        },1000);
 	else setTimeout(function(){alert("Calculatorul te.a intrebat daca esti "+ a);},1000);
 	
 }
@@ -659,9 +674,15 @@ function BaronC(){
 							
 						},800);
 	if(CarteManaC < CarteManaJ)
-		setTimeout(function(){alert("CASTIGAT");},1200);
+		setTimeout(function(){
+            rezultat="castigat";
+            window.open("./sfarsit.html", "_self");
+        },1200);
 	if(CarteManaC > CarteManaJ)
-		setTimeout(function(){alert("PIERDUT");},1200);
+		setTimeout(function(){
+            rezultat="pierdut";
+            window.open("./sfarsit.html", "_self");
+        },1200);
 	if(CarteManaC == CarteManaJ)
 		CarteAflata=CarteManaC;
 }
@@ -671,8 +692,10 @@ function CameristaC(){
 }
 
 function PrintC(){
-	if(CarteManaJ==8)
-		alert("PIERDUT");
+	if(CarteManaJ==8){
+        rezultat="pierdut";
+        window.open("./sfarsit.html", "_self");
+    }
 	else{
 		var t2=document.getElementById("j_j");
 		t2.removeChild(document.getElementById("j_j_img"));			
@@ -723,7 +746,8 @@ function ContesaC(){
 }
 
 function PrintesaC(){
-	alert("CASTIGAT");
+    rezultat="castigat";
+    window.open("./sfarsit.html", "_self");
 }
 
 function actiuneC(CarteJucata){
@@ -767,13 +791,15 @@ function actiuneC(CarteJucata){
 function PrintSingurC(){
 	
 	if(CarteManaC==8){
-		alert("CASTIGAT"+CarteManaC);
 		var t5=document.getElementById("a_m");
 		setTimeout(function(){t5.removeChild(document.getElementById("a_m_img"));},200);			
 		var x5 =corelare_Carte_Vector(CarteManaC);
 		setTimeout(function(){t5.appendChild(x5);},300);
 		x5.setAttribute("id", "a_m_img");
-		setTimeout(function(){alert("CASTIGAT");},800);
+		setTimeout(function(){
+            rezultat="castigat";
+            window.open("./sfarsit.html", "_self");
+        },800);
 	}
 	else{
 		
