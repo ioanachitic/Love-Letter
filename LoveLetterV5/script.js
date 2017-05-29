@@ -10,9 +10,11 @@ MAN=0;
 a2aRunda=0;
 var ok=0;
 
+
 cameristaJ=false;
 cameristaC=false;
 CarteAflata=0;
+
 
 function arata_reguli(){
     document.getElementById("reguli_buton").style.display="block";
@@ -23,18 +25,6 @@ function ascunde_reguli(){
     document.getElementById("gardian").style.display="none";
 }
 
-var rezultat="castigat";
-
-function rez(){
-    if(rezultat=="castigat"){
-        var c=document.getElementById("castigat");
-        c.style.display="block";
-    }
-    else{
-        var c=document.getElementById("pierdut");
-        c.style.display="block";
-    }
-}
 
 function start_joc(){
 	var b=document.getElementById("start");
@@ -44,11 +34,7 @@ function start_joc(){
 	setTimeout(punePrimaCarteJos, 500);
 
 	ok=1;
-
 	document.getElementById("pachet").addEventListener("click", Joc);
-
-	
-    
 }
 
 function getRndInteger(min, max) {                         
@@ -79,7 +65,7 @@ function crearePachet(){
 			pachet[i]=man;
 		}
     }
-	pachet = [2,2,3,8,3,4,1,1,1,2,7,5,7,8];
+	pachet = [8,2,3,8,3,4,1,1,1,2,7,5,7,8];
 	return pachet;
 }
 
@@ -95,7 +81,9 @@ function Joc(){
 	document.getElementById("j_t").removeEventListener("click", joacaCarteaT);
 	document.getElementById("j_m").removeEventListener("click", joacaCarteaM);
 	document.getElementById("j_m").removeEventListener("click",astepareTragereCarteCalculator);
-	document.getElementById("j_t").removeEventListener("click",astepareTragereCarteCalculator);
+	document.getElementById("j_t").removeEventListener("click",astepareTragereCarteCalculator); 
+    trageCarteJ();
+	randJ();
 	}
 	else{
 	MAN=1;
@@ -521,13 +509,11 @@ function BaronJ(){
 						},800);
 	if(CarteManaC < CarteManaJ)
 		setTimeout(function(){
-            rezultat="castigat";
-            window.open("./sfarsit.html", "_self");
+            window.open("sfarsitCastigat.html", "_self");
         },1000);
 	if(CarteManaC > CarteManaJ)
 		setTimeout(function(){
-            rezultat="pierdut";
-            window.open("./sfarsit.html", "_self");
+            window.open("sfarsitPierdut.html", "_self");
         },1000);
 	if(CarteManaC == CarteManaJ){
 		CarteAflata=CarteManaC;
@@ -543,8 +529,7 @@ function CameristaJ(){
 
 function PrintJ(){
 	if(CarteManaC==8){
-        rezultat="castigat";
-        window.open("./sfarsit.html", "_self");
+        window.open("sfarsitCastigat.html", "_self");
     }
 	else{
 		var t=document.getElementById("a_j");
@@ -594,8 +579,7 @@ function ContesaJ(){
 }
 
 function PrintesaJ(){
-    rezultat="pierdut";
-    window.open("./sfarsit.html", "_self");
+    window.open("sfarsitPierdut.html", "_self");
 }
 
 function actiuneJ(CarteJucata){
@@ -653,8 +637,7 @@ function GardianaC(){// de facut mai frumusel
 	
 	if(a==CarteManaJ)
 		setTimeout(function(){
-            rezultat="pierdut";
-            window.open("./sfarsit.html", "_self");
+            window.open("sfarsitPierdut.html", "_self");
         },1000);
 	 
 	
@@ -692,13 +675,11 @@ function BaronC(){
 						},800);
 	if(CarteManaC < CarteManaJ)
 		setTimeout(function(){
-            rezultat="castigat";
-            window.open("./sfarsit.html", "_self");
+            window.open("sfarsitCastigat.html", "_self");
         },1200);
 	if(CarteManaC > CarteManaJ)
 		setTimeout(function(){
-            rezultat="pierdut";
-            window.open("./sfarsit.html", "_self");
+            window.open("sfarsitPierdut.html", "_self");
         },1200);
 	if(CarteManaC == CarteManaJ)
 		CarteAflata=CarteManaC;
@@ -710,8 +691,7 @@ function CameristaC(){
 
 function PrintC(){
 	if(CarteManaJ==8){
-        rezultat="pierdut";
-        window.open("./sfarsit.html", "_self");
+        window.open("sfarsitPierdut.html", "_self");
     }
 	else{
 		var t2=document.getElementById("j_j");
@@ -763,8 +743,7 @@ function ContesaC(){
 }
 
 function PrintesaC(){
-    rezultat="castigat";
-    window.open("./sfarsit.html", "_self");
+    window.open("sfarsitCastigat.html", "_self");
 }
 
 function actiuneC(CarteJucata){
@@ -814,8 +793,7 @@ function PrintSingurC(){
 		setTimeout(function(){t5.appendChild(x5);},300);
 		x5.setAttribute("id", "a_m_img");
 		setTimeout(function(){
-            rezultat="castigat";
-            window.open("./sfarsit.html", "_self");
+            window.open("sfarsitCastigat.html", "_self");
         },800);
 	}
 	else{

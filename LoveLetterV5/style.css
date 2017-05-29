@@ -458,7 +458,7 @@ a:active{
 }
 
 #castigat{
-    display: none;
+    display: block;
     margin-top: 60px;
     margin-bottom: 60px;
 }
@@ -469,7 +469,7 @@ a:active{
 }
 
 #pierdut{
-    display: none;
+    display: block;
     margin-top: 60px;
     margin-bottom: 60px;
 }
