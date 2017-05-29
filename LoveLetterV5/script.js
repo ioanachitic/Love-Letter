@@ -79,7 +79,7 @@ function crearePachet(){
 			pachet[i]=man;
 		}
     }
-	//pachet = [2,3,3,5,3,4,1,1,1,2,7,5,7,8];
+	pachet = [2,2,3,8,3,4,1,1,1,2,7,5,7,8];
 	return pachet;
 }
 
@@ -644,19 +644,36 @@ function GardianaC(){// de facut mai frumusel
 		CarteAflata=0;
 	}
 	
+    var gg=document.getElementById("gardian_ghiceste");
+    gg.innerHTML="Adversarul te-a intrebat daca esti "+a;
+    
+    gg.style.display="block";
+    
+    setTimeout(function(){gg.style.display="none";}, 1800);
 	
 	if(a==CarteManaJ)
 		setTimeout(function(){
-            rezultat="castigat";
+            rezultat="pierdut";
             window.open("./sfarsit.html", "_self");
         },1000);
-	else setTimeout(function(){alert("Calculatorul te.a intrebat daca esti "+ a);},1000);
+	 
 	
 }
 
 function PreotC(){ //de facut mai frumusel
 	CarteAflata=CarteManaJ;
-	alert("se uita la cartea ta!");
+	var gg=document.getElementById("gardian_ghiceste");
+    gg.innerHTML="Adversarul se uita la cartea ta:<br><br>";
+    
+    var carte=document.createElement("img");
+    carte.src=document.getElementById("j_m_img").src;
+    gg.appendChild(carte);
+    
+    
+    gg.style.display="block";
+    
+    setTimeout(function(){gg.style.display="none";}, 3600);
+	
 }
 
 function BaronC(){

@@ -196,6 +196,14 @@ div > p{
     background-color: #ffbb99;
     border: 4px inset #ffccb3;
     outline: 2px inset #802b00; 
+    text-align: center;
+    padding: 20px 0px;
+}
+
+@media screen and (max-width: 800px){
+    #reguli{
+        font-size: 84%;
+    }
 }
 
 #buton_reguli{
@@ -371,13 +379,15 @@ div img{
     height: 70%;
     width: 70%;
     position: fixed;
-    top: 25%;
+    top: 15%;
     left:15%;
     background-color: #331100;
     color: #ffddcc;
     text-align: center;
     display: none;
     border-radius: 30px;
+    padding-top: 20px;
+    font-size: 90%;
 }
 
 .inchide{
@@ -408,6 +418,19 @@ div img{
 }
 
 
+#gardian_ghiceste{
+    width: 40%;
+    height: auto;
+    position: fixed;
+    top: 40%;
+    left:30%;
+    background-color: #331100;
+    color: #ffddcc;
+    padding: 20px;
+    display: none;
+    border-radius: 30px;
+    text-align: center;
+}
 
 
 
