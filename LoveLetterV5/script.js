@@ -15,6 +15,7 @@ cameristaJ=false;
 cameristaC=false;
 CarteAflata=0;
 
+function script(){}
 
 function arata_reguli(){
     document.getElementById("reguli_buton").style.display="block";
@@ -65,6 +66,7 @@ function crearePachet(){
 			pachet[i]=man;
 		}
     }
+    //pachet = [1,8,3,6,7,8,1,1,1,2]
 	return pachet;
 }
 
@@ -186,7 +188,7 @@ function depunereCarteCalc(){
 	CarteJucataC=C;
 	setTimeout(function(){if(cameristaJ){cameristaJ=false;
 							actiuneSingurC(CarteJucataC);}
-							else actiuneC(CarteJucataC);},5000);
+							else actiuneC(CarteJucataC);},1000);
 	if(C==CarteManaC){
 		CarteManaC=CarteTrasaC;
 		CarteTrasaC=0;
@@ -454,8 +456,7 @@ function alege(){
 	if(sem == 1)
 	{
 		if(CarteManaC== i/3+1){
-			rezultat="castigat";
-            window.open("./sfarsit.html", "_self");
+            window.open("./sfarsitCastigat.html", "_self");
 		}
 
 	   else astepareTragereCarteCalculator();
@@ -617,7 +618,7 @@ function actiuneJ(CarteJucata){
 	}	
 }
 
-function GardianaC(){// de facut mai frumusel
+function GardianaC(){
 	var a;
 	if(CarteAflata<=1){
 		a=getRndInteger(2, 8);
@@ -654,7 +655,7 @@ function PreotC(){ //de facut mai frumusel
     
     gg.style.display="block";
     
-    setTimeout(function(){gg.style.display="none";}, 3600);
+    setTimeout(function(){gg.style.display="none";}, 2000);
 	
 }
 
@@ -746,6 +747,7 @@ function PrintesaC(){
 }
 
 function actiuneC(CarteJucata){
+    //alert("ceva");
 	switch (CarteJucata) {
 
 		case 1:
@@ -765,11 +767,11 @@ function actiuneC(CarteJucata){
 			break;
 
 		case 5:
-			setTimeout(function(){PrintC();},5000);
+			setTimeout(function(){PrintC();},1000);
 			break;
 
 		case 6:
-			setTimeout(function(){RegeC();},5000);
+			setTimeout(function(){RegeC();},1000);
 			break;
 
 		case 7:
