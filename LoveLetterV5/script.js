@@ -65,7 +65,6 @@ function crearePachet(){
 			pachet[i]=man;
 		}
     }
-	pachet = [8,2,3,8,3,4,1,1,1,2,7,5,7,8];
 	return pachet;
 }
 
@@ -187,7 +186,7 @@ function depunereCarteCalc(){
 	CarteJucataC=C;
 	setTimeout(function(){if(cameristaJ){cameristaJ=false;
 							actiuneSingurC(CarteJucataC);}
-							else actiuneC(CarteJucataC);},1000);
+							else actiuneC(CarteJucataC);},5000);
 	if(C==CarteManaC){
 		CarteManaC=CarteTrasaC;
 		CarteTrasaC=0;
@@ -510,11 +509,11 @@ function BaronJ(){
 	if(CarteManaC < CarteManaJ)
 		setTimeout(function(){
             window.open("sfarsitCastigat.html", "_self");
-        },1000);
+        },5000);
 	if(CarteManaC > CarteManaJ)
 		setTimeout(function(){
             window.open("sfarsitPierdut.html", "_self");
-        },1000);
+        },5000);
 	if(CarteManaC == CarteManaJ){
 		CarteAflata=CarteManaC;
 		astepareTragereCarteCalculator();
@@ -638,7 +637,7 @@ function GardianaC(){// de facut mai frumusel
 	if(a==CarteManaJ)
 		setTimeout(function(){
             window.open("sfarsitPierdut.html", "_self");
-        },1000);
+        },5000);
 	 
 	
 }
@@ -676,11 +675,11 @@ function BaronC(){
 	if(CarteManaC < CarteManaJ)
 		setTimeout(function(){
             window.open("sfarsitCastigat.html", "_self");
-        },1200);
+        },5000);
 	if(CarteManaC > CarteManaJ)
 		setTimeout(function(){
             window.open("sfarsitPierdut.html", "_self");
-        },1200);
+        },5000);
 	if(CarteManaC == CarteManaJ)
 		CarteAflata=CarteManaC;
 }
@@ -766,11 +765,11 @@ function actiuneC(CarteJucata){
 			break;
 
 		case 5:
-			setTimeout(function(){PrintC();},1000);
+			setTimeout(function(){PrintC();},5000);
 			break;
 
 		case 6:
-			setTimeout(function(){RegeC();},1000);
+			setTimeout(function(){RegeC();},5000);
 			break;
 
 		case 7:

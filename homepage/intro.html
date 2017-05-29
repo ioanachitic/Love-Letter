@@ -1,0 +1,54 @@
+<?php 
+/* Main page with two forms: sign up and log in */
+require 'db.php';
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Begin</title>
+   <link rel="stylesheet" href="../css/style.css">
+  <style>
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+</style>
+</div>
+</head>
+<?php 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+{
+    if (isset($_POST['login'])) { //user logging in
+
+        require 'login.php';
+        
+    }
+    
+    elseif (isset($_POST['register'])) { //user registering
+        
+        require 'register.php';
+        
+    }
+}
+?>
+<body>
+<div id="head"><h1>Love Letter- The Board Game Experience</h1></head>
+<div class="main">
+
+<p>
+<center>All of the eligible young men (and many of the not-so-young) seek to woo the princess of Tempest. 
+Unfortunately, she has locked herself in the palace, and you must rely on others to take your romantic letters to her. 
+Will yours reach her first? 
+<p>Love Letter is a game of risk, deduction, and luck for 2–4 players. 
+Your goal is to get your love letter into Princess Annette's hands while deflecting the letters from competing suitors. 
+From a deck with only sixteen cards, each player starts with only one card in hand; one card is removed from play. 
+On a turn, you draw one card, and play one card, trying to expose others and knock them from the game. </p>
+<p>Powerful cards lead to early gains, but make you a target. Rely on weaker cards for too long, however, 
+and your letter may be tossed in the fire!</p>
+
+<p>Number 4 in the Tempest Shared World Game Series</center></p></div>
+
+ <a href="../index.php"><button class="button button-block" name="logout"/>Begin the Experience</button></a>
+ <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
